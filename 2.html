@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - html</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   #active {
+     color:red;
+   }
+   a {
+     color:black;
+     text-decoration: none;
+   }
+   h1 {
+     font-size:45px;
+     text-align: center;
+     border-bottom:1px solid gray;
+     margin:0;
+     padding:20px;
+   }
+   ol{
+     border-right:1px solid gray;
+     width:250px;
+     margin:0;
+     padding:50px;
+     font-size: 30px;
+   }
+   @@media (min-width:800px;) {
+
+   }
+   body{
+     margin: 0;
+   }
+   #grid{
+     display: grid;
+     grid-template-columns: 360px 1fr;
+   }
+   #grid ol{
+     padding-left: 50px;
+   }
+   #grid #atricle{
+     padding-left:100px;
+   }
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">그 동안의 행적들</a></h1>
+  <div id="grid">
+    <ol>
+      <li><a href="1.html" >간단한 소개</a></li>
+      <li><a href="2.html" class="saw active" id="active">그동안의 행적들</a></li>
+      <li><a href="3.html">여자친구 자랑</a></li>
+    </ol>
+    <div id="article">
+
+        <h2>인생 족보</h2>
+        <p>
+          <ul>
+            <li>대전에서 태어남</li>
+            <li>초등학교 5학년때 서울ㄹ로 이사</li>
+            <li> 중딩때 용인으로 이사</li>
+            <li>상현고 입학 및 유예빈이랑 친구됌</li>
+            <li>밴드 공연도 함</li>
+            <li>나사렛대 입학 및 자퇴</li>
+            <li>강남대 입학 </li>
+            <li>여자친구 만남</li>
+            <li>군대다녀옴</li>
+            <li>지금 이 페이지 만드는 중</li>
+
+          </ul>
+
+        </p>
+      </div>
+  </div>
+  </body>
+  </html>
