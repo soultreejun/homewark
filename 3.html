@@ -13,15 +13,12 @@
       font-size: 30px;
     }
      #active {
-       color:red;
+       text-decoration: underline;
      }
      .saw {
        color:gray;
      }
-     a {
-       color:black;
-       text-decoration: none;
-     }
+
      h1 {
        font-size:45px;
        text-align: center;
@@ -40,6 +37,7 @@
      #grid{
        display: grid;
        grid-template-columns: 360px 1fr;
+
      }
      #grid ol{
        padding-left: 50px;
@@ -53,6 +51,8 @@
       }
       ol{
         border-right:none;
+        color:green;
+
       }
 
      body{
@@ -63,6 +63,33 @@
 </head>
 <body>
   <h1><a href="index.html">여자친구 자랑</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  ">
+  <input id="goback" type="button" value="goback" onclick="location.href='index.html'">
   <div id="grid">
     <ol>
       <li><a href="1.html">간단한 소개</a></li>
@@ -78,8 +105,4 @@
   <img src=" with soo.jpg" width="500" height="1000">
   <br><br><a href="https://sooahlee.me/" target="_blank">5월달이네.. 벌써 3개월전인가 (soo blog)</a>
   <br>대학원 뉴욕으로 꼭 가야겠다!
-
-  <h5>
-  <div ><a href="index.html">처음으로 돌아가기</a></br>
-  </h5>
 </body>
