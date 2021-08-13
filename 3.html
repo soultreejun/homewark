@@ -3,8 +3,13 @@
 <head>
   <title>WEB1 - html</title>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    body{
+      font-family: 'Nanum Gothic', sans-serif;
+      margin: 0;
+    }
     h1{
       font-size:45px;
       text-align: center;
@@ -54,40 +59,41 @@
         color:green;
 
       }
-
-     body{
-       margin: 0;
-     }
    }
   </style>
+  <script>
+    function setColer(){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'coler';
+        i = i + 1;
+      }
+    }
+    function nightdayhandeler(self){
+      var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      self.value = 'day';
+
+      setColer('powderblue');
+      }
+     else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      self.value = 'night';
+
+      setColer('blue');
+      }
+    }
+    
+  </script>
 </head>
 <body>
   <h1><a href="index.html">여자친구 자랑</a></h1>
   <input id="night_day" type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'blue';
-        i = i + 1;
-      }
-    }
+    nightdayhandeler(this);
   ">
   <input id="goback" type="button" value="goback" onclick="location.href='index.html'">
   <div id="grid">
